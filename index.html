@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Virtual</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <h1>Loja Virtual</h1>
+    </header>
+    <main>
+        <section class="sobre-a-loja">
+            <div class="imagem-loja">
+                <img src="./imagem/store-4027251_1280.jpg" alt="Imagem da Loja">
+            </div>
+            <div class="texto-loja">
+                <h2>Sobre a Loja</h2>
+                <p>Bem-vindo à nossa loja virtual. "Vista-se com estilo e confiança, explore nossa coleção que combina tendências modernas com o conforto que você merece!"</p>
+            </div>
+        </section>
+        <section class="produtos">
+            <h2>Nossos Produtos</h2>
+            <div class="lista-produtos">
+                <div class="produto">
+                    <img src="./imagem/premium-991221_1280.jpg" alt="Produto 1">
+                    <h3>Produto 1</h3>
+                    <p>Camisas Premium</p>
+                    <button>Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto">
+                    <img src="./imagem/t-shirt-1524677_1280.jpg" alt="Produto 2">
+                    <h3>Produto 2</h3>
+                    <p>Camisas diversas</p>
+                    <button>Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto">
+                    <img src="./imagem/tie-8325965_1280.jpg" alt="Produto 3">
+                    <h3>Produto 3</h3>
+                    <p>Social</p>
+                    <button>Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Loja Virtual. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.produto button');
+            
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    alert('Produto adicionado ao carrinho!');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
