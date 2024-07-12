@@ -1,84 +1,180 @@
-body {
-    font-family: Arial, sans-serif;
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto',sans-serif;
 }
 
-header, footer {
-    background-color: #333;
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+header {
+    background-color: #192a56;
+    padding-top: 16px;
     color: #fff;
-    text-align: center;
-    padding: 1em 0;
 }
 
-main {
-    padding: 1em;
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+header > .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+}
+
+nav {
+    background-color: #575fcf;
+    padding: 16px 0;
+    display: none;
+}
+
+nav li {
+    list-style: none;
+    display: inline;
+    margin-right: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.container-flex {
+    display: flex;
 }
 
 .sobre-a-loja {
+    margin-top: 16px;
     display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 2em;
 }
 
-.imagem-loja, .texto-loja {
-    flex: 1 1 100%;
-    padding: 1em;
+.sobre-a-loja img {
+    max-width: 400px;
+    margin-right: 24px;
 }
 
-.imagem-loja img {
-    max-width: 100%;
-    height: auto;
+section {
+    margin-top: 16px;
 }
 
-.lista-produtos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
+.lista {
+    margin-top: 16px ;
 }
 
-.produto img {
+.lista ul{
+    display: grid;
+    grid-template-columns: repeat( 4 , 24.5%);
+    column-gap: 1%;
+}
+
+.lista-produtos img {
     width: 100%; 
-    height: 200px; 
+    height: 200px;
     object-fit: cover; 
+    margin-bottom: 10px; 
 }
 
-.produto {
-    flex: 1 1 calc(25% - 1em);
-    border: 1px solid #ccc;
-    padding: 1em;
-    text-align: center;
+.lista-produtos li {
+    list-style: none;
 }
 
-.produto h3 {
-    margin: 0.5em 0;
+.price {
+    margin: 4px;
 }
 
-.produto button {
-    padding: 0.5em 1em;
-    background-color: #28a745;
-    color: #fff;
+button {
+    display: block;
+    width: 100%;
+    padding: 2px 0;
+    margin-top: 2px;
     border: none;
+    background-color: green;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
     cursor: pointer;
+    border-radius: 6px;
 }
 
-.produto button:hover {
-    background-color: #218838;
+button:hover {
+    background-color: #36e082;
 }
 
-@media (max-width: 768px) {
-    .imagem-loja, .texto-loja {
-        flex: 1 1 100%;
+@media  screen and ( max-width: 640px) {
+
+    .container {
+        max-width: 90%;
+        display: block;
+    } 
+    
+    header > .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding-bottom: 16px;
     }
 
-    .produto {
-        flex: 1 1 calc(50% - 1em);
+    .sobre-a-loja {
+        display: flex;
     }
+    
+    .sobre-a-loja img {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 2%;
+    }
+
+    .lista ul {
+        display: block;
+        column-gap: 1%;
+        row-gap: 5%;
+    }
+
+    button {
+        margin-bottom: 10px;
+    }
+
 }
 
-@media (max-width: 480px) {
-    .produto {
-        flex: 1 1 100%;
+@media screen and ( min-width: 641px) and ( max-width: 1023px) {
+    .container{
+        max-width: 90%;
+    }
+
+    .sobre-a-loja .container-flex {
+        display: block;
+    }
+    
+    .sobre-a-loja img {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 2%;
+    }   
+
+    .lista .container-flex {
+        grid-template-columns: repeat(2, 49%);
+    }
+
+    button {
+        margin-bottom: 10px;
     }
 }

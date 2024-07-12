@@ -1,62 +1,110 @@
+
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja Virtual</title>
-    <link rel="stylesheet" href="main.css">
+    <title> Loja Virtual</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 </head>
 <body>
     <header>
-        <h1>Loja Virtual</h1>
+        <div class="container container-flex" id="menu-hamburguer">
+            <h1>Loja Virtual</h1>
+            <div class="menu-hamburguer">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <nav>
+            <div class="container">
+                <ul>
+                    <li>
+                        <a href="#">Sobre</a>
+                    </li>
+                    <li>
+                        <a href="#">Roupas</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
-    <main>
-        <section class="sobre-a-loja">
-            <div class="imagem-loja">
-                <img src="./imagem/store-4027251_1280.jpg" alt="Imagem da Loja">
+    <section class="sobre-a-loja">
+        <div class="container container-flex">
+            <img src="./imagem/store-4027251_1280.jpg" alt="imagem da loja Pixel Haven  ">
+            <div>
+                <h2>Sobre nós</h2>
+                <p>Explore nossa coleção diversificada de produtos, cuidadosamente escolhidos para atender às suas necessidades e superar suas expectativas. Seja para encontrar o presente perfeito, renovar seu espaço pessoal ou simplesmente se mimar, estamos aqui para ajudar.</p>
+                
             </div>
-            <div class="texto-loja">
-                <h2>Sobre a Loja</h2>
-                <p>Bem-vindo à nossa loja virtual. "Vista-se com estilo e confiança, explore nossa coleção que combina tendências modernas com o conforto que você merece!"</p>
-            </div>
-        </section>
-        <section class="produtos">
-            <h2>Nossos Produtos</h2>
-            <div class="lista-produtos">
-                <div class="produto">
-                    <img src="./imagem/premium-991221_1280.jpg" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Camisas Premium</p>
-                    <button>Adicionar ao Carrinho</button>
-                </div>
-                <div class="produto">
-                    <img src="./imagem/t-shirt-1524677_1280.jpg" alt="Produto 2">
-                    <h3>Produto 2</h3>
-                    <p>Camisas diversas</p>
-                    <button>Adicionar ao Carrinho</button>
-                </div>
-                <div class="produto">
-                    <img src="./imagem/tie-8325965_1280.jpg" alt="Produto 3">
-                    <h3>Produto 3</h3>
-                    <p>Social</p>
-                    <button>Adicionar ao Carrinho</button>
-                </div>
-            </div>
-        </section>
+        </div>
+    </section>
+    <div class="container">
+        <main>
+        <section>
+        <h2>Ternos</h2>
+        <div class="lista">
+            <article class="lista-produtos">
+                <ul class="container-flex">
+                <li>
+                    <img src="./imagem/terno.jpg" alt="">
+                    <h3>Ternos elegantes</h3>                    
+                    <p>
+                       Para ocasiões especiais
+                    </p>
+                    <div class="price">
+                        <strong>R$1200</strong>
+                    </div>
+                    <button type="button">Comprar</button>
+                </li>
+                <li class="item-central">
+                    <img src="./imagem/t-shirt-1524677_1280.jpg" alt="">
+                    <h3>Camisas</h3>
+                    <p>
+                        Camisas diversas
+                    </p>
+                    <div class="price">
+                        <strong>R$100</strong>
+                    </div>
+                    <button type="button">Comprar</button>
+                </li>
+                <li>
+                    <img src="./imagem/tie-8325965_1280.jpg" alt="">
+                    <h3>Conjuntos</h3>
+                    <p>
+                        Conjuntos prontos
+                    </p>
+                    <div class="price">
+                        <strong>R$11900</strong>
+                    </div>
+                    <button type="button">Comprar</button>
+                </li>
+                <li>
+                    <img src="./imagem/premium-991221_1280.jpg" alt="">
+                    <h3>Exclusividade</h3>
+                    <p>
+                        Produtos exclusivos
+                    <div class="price">
+                        <strong>R12000</strong>
+                    </div>
+                    <button type="button">Comprar</button>
+                </li>
+            </ul>
+            </article>
+        </div>
+    </section>
     </main>
-    <footer>
-        <p>&copy; 2024 Loja Virtual. Todos os direitos reservados.</p>
-    </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const buttons = document.querySelectorAll('.produto button');
-            
-            buttons.forEach(button => {
-                button.addEventListener('click', function() {
-                    alert('Produto adicionado ao carrinho!');
-                });
-            });
-        });
-    </script>
+    </div>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="main.js"></script>
+
 </body>
 </html>
